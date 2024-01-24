@@ -32,6 +32,9 @@ calcularValorTotal = function(){
                 Subtotal esperado: 54
             Si el caso de prueba es exitoso, hacer un commit
          */
+
+
+        
     //6. Invocar a calcularDescuento y lo que devuelve guardar en la variable valorDescuento
     //7. Mostrar el resultado en el componente lblDescuento
         /*

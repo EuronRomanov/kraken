@@ -35,6 +35,8 @@ limpiar=()=>{
     lanzamientos=5;
     cambiarTexto("lblPuntos",puntos);
     cambiarTexto("lblLanzamientos",lanzamientos);
+    cambiarTexto("lblResultado","");
+    cambiarImagen("imgDado","");
 }
 
 mostrarCara=(numero)=>{

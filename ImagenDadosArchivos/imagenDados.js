@@ -35,7 +35,7 @@ limpiar=()=>{
     lanzamientos=5;
     cambiarTexto("lblPuntos",puntos);
     cambiarTexto("lblLanzamientos",lanzamientos);
-    cambiarTexto("lblResultado","");
+    cambiarTexto("lblResultado","xx");
     cambiarImagen("imgDado","");
 }
 

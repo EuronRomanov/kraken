@@ -5,29 +5,32 @@ let lanzamientos=5;
 jugar=function(){
     let resultado;
     resultado=lanzarDado();
-    console.log(resultado);
+   /// console.log(resultado);
     mostrarCara(resultado);
     modificarPuntos(resultado);
-    if (puntos>20) {
-        cambiarTexto("lblResultado","GANASTE!!");
-        limpiar();
-    }
+    
     modificarLanzamientos();
+    
 }
 
 
 modificarPuntos=(numero)=>{
     puntos=puntos+numero;
     cambiarTexto("lblPuntos",puntos);
+    if (puntos>20) {
+        cambiarTexto("lblResultado","GANASTE!!");
+        limpiar();
+    }
 }
 
 modificarLanzamientos=()=>{
-    lanzamientos--;
+    lanzamientos=lanzamientos-1;
     cambiarTexto("lblLanzamientos",lanzamientos);
-    if (lanzamientos==0) {
+    if (lanzamientos<=0) {
         cambiarTexto("lblResultado","GAME OVER");
         limpiar();
     }
+   
 }
 
 limpiar=()=>{
@@ -35,8 +38,9 @@ limpiar=()=>{
     lanzamientos=5;
     cambiarTexto("lblPuntos",puntos);
     cambiarTexto("lblLanzamientos",lanzamientos);
-    cambiarTexto("lblResultado","xx");
+  
     cambiarImagen("imgDado","");
+   
 }
 
 mostrarCara=(numero)=>{

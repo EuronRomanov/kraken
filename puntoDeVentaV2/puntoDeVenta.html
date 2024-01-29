@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="utilitarios.js"></script>
+        <script src="serviciosPuntoDeVenta.js"></script>
+         <script src="puntoDeVenta.js"></script>
+         <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+
+
+
+
+<div class="principal">
+    <div class="logoEscuela">
+        <img src="./imagenes/logoKrakeDev.png" width="80%" />
+    </div>
+
+    <div class="contenido">
+        <div class="titulo">
+            PUNTO DE VENTA
+        </div>
+
+        <div class="ingresoDatos">
+            <div class="tituloCampo">
+                PRODUCTO
+            </div>
+            <div class="cajaCampo">
+                <input type="text" class="cajaTexto" id="txtProducto"/>
+                <div class="error" id="lblError1"></div>
+            </div>
+        </div>
+       
+        <div class="ingresoDatos">
+            <div class="tituloCampo">
+                CANTIDAD
+            </div>
+            <div class="cajaCampo">
+                <input type="text" class="cajaTexto" id="txtCantidad"/>
+                <div class="error" id="lblError2"></div>
+            </div>
+        </div>
+        <div class="ingresoDatos">
+            <div class="tituloCampo">
+                PRECIO
+            </div>
+            <div class="cajaCampo">
+                <input type="text"class="cajaTexto"  id="txtPrecio"/>
+                <div class="error" id="lblError3"></div>
+            </div>
+        </div>
+        <div class="botones">
+            <div class="contenedorBoton">
+                <input type="button" value="CALCULAR TOTAL" class="estiloBoton"
+        onclick="calcularValorTotal()"/>
+            </div>
+            <div class="contenedorBoton">
+                <input type="button" class="estiloBoton" value="LIMPIAR" 
+                onclick="limpiar()"/>
+            </div>
+         </div>
+    </div>
+    <div class="areaResultado">
+        <div class="resultado">
+           
+            <div class="resultado1">
+                <div>
+                    SUBTOTAL:
+                </div>
+                <div id="lblSubtotal">
+                    0.0
+                </div>
+            </div>
+            <div class="resultado1">
+                <div>
+                    DESCUENTO:
+                </div>
+                <div id="lblDescuento">
+                    0.0
+                </div>
+            </div>
+            <div class="resultado1">
+                <div>
+                    IVA 12%:
+                </div>
+                <div id="lblValorIVA">
+                    0.0
+                </div>
+            </div>
+            <div class="resultado1">
+                <div>
+                    TOTAL:
+                </div>
+                <div id="lblTotal">
+                    0.0
+                </div>
+            </div>
+        </div>    
+      
+        </div>
+       
+        
+    </div>
+</div>
+
+
+    </body> 
+</html>

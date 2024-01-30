@@ -1,0 +1,69 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.puntaje{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+}
+.puntos{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.opciones{
+    
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.opcion{
+    flex: 1;
+   margin-right: 20px;
+}
+.estiloBoton{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+.estiloBoton:hover {
+    background-color:white; 
+    color: #4CAF50;
+    border:1px;
+    border-color: #4CAF50;
+    border-radius: 5px;
+}
+.estiloBoton:active{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+.contenedorBoton{
+    display: flex;
+    flex:1;
+    justify-content: center;
+}

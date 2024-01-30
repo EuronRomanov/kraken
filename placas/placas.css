@@ -1,0 +1,96 @@
+
+body{
+    display: flex;
+    justify-content: center;
+   
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+      align-items: center;
+      border:  1px solid #000;
+      padding: 20px;
+      width: 40%;
+      border-radius: 30px;
+}
+
+.agregarInformacion{
+    display: flex;
+   margin-top: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formulario{
+    display: flex;
+   
+    flex-direction:row;
+}
+.cajaTexto{
+    border-radius: 4px;
+    border-color: #4CAF50;
+    flex: 1;
+    font-size: 20px;
+    color:rgb(85, 83, 83);
+}
+.tituloCampo{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 20px;
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cajaCampo{
+    flex: 1;
+  }
+
+  .estiloBoton{
+    background-color: hsl(204, 39%, 49%); 
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+.estiloBoton:hover {
+    background-color:#41a7eb; 
+    color: white;
+    border:1px;
+    border-color: #4CAF50;
+    border-radius: 5px;
+}
+  .estiloBoton:active{
+    background-color:#41a7eb; 
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+  .botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+.contenedorBoton{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.errores{
+    color:red;
+    font-style: italic;
+    font-size: 16px;
+}

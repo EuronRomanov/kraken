@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="placas.js"></script>
+    <script src="utilitarios.js"></script>
+    <script src="utilitariosCadenas.js"></script>
+    <script src="serviciosPlaca.js"></script>
+    <link rel="stylesheet" href="placas.css">
+</head>
+<body>
+    <div class="container">
+        <div class="agregarInformacion">
+            <div class="formulario">
+                <div class="tituloCampo">
+                    PLACA :
+                </div>
+                <div class="cajaCampo">
+                    <input type="text" class="cajaTexto" id="txtPlaca"/>
+                    <div class="error" id="lblError1"></div>
+                </div>
+           </div>
+            <div class="botones">
+                <div class="contenedorBoton">
+                    <input type="button" value="VALIDAR" class="estiloBoton"
+            onclick="validarPlaca()"/>
+                </div>
+                <div class="contenedorBoton">
+                    <input type="button" value="LIMPIAR" class="estiloBoton"
+            onclick="limpiar()"/>
+                </div>
+            </div>
+        </div>
+        <div class="mensaje">
+            <p id="lblResultado"></p>
+            <p id="lblProvincia"></p>
+            <p id="lblTipoVehiculo"></p>
+            <p id="lblDiaPicoPlaca"></p>
+        </div>
+        <div class="errores">
+            <p id="lblErrores"></p>
+        </div>
+    </div>
+</body>
+</html>

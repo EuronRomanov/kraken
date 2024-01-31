@@ -65,9 +65,7 @@ if (encontrado==-1) {
    
 }
 
-if (errores==palabraSecreta.length) {
-    alert("LA LETRA NO ES PARTE DE LA PALABRA");
-}
+
 
 }
 

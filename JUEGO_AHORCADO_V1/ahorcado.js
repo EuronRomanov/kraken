@@ -46,18 +46,25 @@ mostrarLetra=(letra, posicion)=>{
 
 validar=(letra)=>{
 let letrasEncontradas=0;
-
+let encontrado=-1;
 
 for (let i = 0; i < palabraSecreta.length; i++) {
     const element = palabraSecreta.charAt(i);
     if (element==letra) {
-        mostrarLetra(letra, i);
+        encontrado=i;
+        mostrarLetra(letra, encontrado);
         letrasEncontradas++;
         coincidencias++;
-    }else{
-        errores++;
     }
 }
+if (encontrado==-1) {
+   
+    errores++;
+    alert("LA LETRA NO ES PARTE DE LA PALABRA");
+    mostrarAhorcado();
+   
+}
+
 if (errores==palabraSecreta.length) {
     alert("LA LETRA NO ES PARTE DE LA PALABRA");
 }
@@ -72,14 +79,23 @@ intentos++;
 
    if (esMayuscula(letra)) {
     validar(letra);
-    if (coincidencias==5) {
-        alert("HA GANADO");
-    }
-    if (intentos==10) {
-        alert("HAS PERDIDO");
-    }
+   
+    
    } else {
     alert("SOLO SE ACEPTAN MAYUSCULAS");
    }
+
+   if (coincidencias==5) {
+   // alert("HA GANADO");
+   mostrarImagen("ahorcadoImagen","ganador.gif");
+}
+if (intentos==10) {
+   // alert("HAS PERDIDO");
+   mostrarImagen("ahorcadoImagen","gameOver.gif");
+}
 }
 
+mostrarAhorcado=()=>{
+    let imagenSeleccionada="Ahorcado_0"+errores+".png";
+    mostrarImagen("ahorcadoImagen",imagenSeleccionada);
+}

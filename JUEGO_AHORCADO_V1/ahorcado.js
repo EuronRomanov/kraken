@@ -40,3 +40,18 @@ mostrarLetra=(letra, posicion)=>{
     let ubicacion="div"+posicion;
     mostrarTexto(ubicacion,letra);
 }
+
+validar=(letra)=>{
+let letrasEncontradas=0;
+
+
+for (let i = 0; i < palabraSecreta.length; i++) {
+    const element = palabraSecreta.charAt(i);
+    if (element==letra) {
+        mostrarLetra(letra, i);
+        letrasEncontradas++;
+    }
+}
+
+
+}

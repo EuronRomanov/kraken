@@ -1,6 +1,9 @@
 //No se olvide de respirar, mantenga la calma y demuestre lo que sabe
 
 let palabraSecreta;
+let intentos=0;
+let coincidencias=0;
+let errores=0;
 esMayuscula=(caracter)=>{
     let codigo;
     codigo=caracter.charCodeAt(0);
@@ -50,18 +53,33 @@ for (let i = 0; i < palabraSecreta.length; i++) {
     if (element==letra) {
         mostrarLetra(letra, i);
         letrasEncontradas++;
+        coincidencias++;
+    }else{
+        errores++;
     }
 }
-
+if (errores==palabraSecreta.length) {
+    alert("LA LETRA NO ES PARTE DE LA PALABRA");
+}
 
 }
 
 ingresarLetra=()=>{
     let letra;
    letra=recuperarTexto("txtLetra");
+
+intentos++;
+
    if (esMayuscula(letra)) {
     validar(letra);
+    if (coincidencias==5) {
+        alert("HA GANADO");
+    }
+    if (intentos==10) {
+        alert("HAS PERDIDO");
+    }
    } else {
     alert("SOLO SE ACEPTAN MAYUSCULAS");
    }
 }
+

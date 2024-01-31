@@ -55,3 +55,13 @@ for (let i = 0; i < palabraSecreta.length; i++) {
 
 
 }
+
+ingresarLetra=()=>{
+    let letra;
+   letra=recuperarTexto("txtLetra");
+   if (esMayuscula(letra)) {
+    validar(letra);
+   } else {
+    alert("SOLO SE ACEPTAN MAYUSCULAS");
+   }
+}

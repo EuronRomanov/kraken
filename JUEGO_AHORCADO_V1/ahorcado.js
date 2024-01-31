@@ -35,3 +35,8 @@ guardarPalabra=()=>{
 console.log(password);
 
 }
+
+mostrarLetra=(letra, posicion)=>{
+    let ubicacion="div"+posicion;
+    mostrarTexto(ubicacion,letra);
+}

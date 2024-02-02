@@ -4,7 +4,19 @@ let empleados = [
     {cedula:"1114632033",nombre:"Pedro",apellido:"Jaramillo",sueldo:800.0}
 ]
 
+let esNuevo=false;
 
+
+
+ejecutarNuevo=()=>{
+
+    esNuevo=true;
+    habilitarComponente("txtCedula");
+    habilitarComponente("txtNombre");
+    habilitarComponente("txtApellido");
+    habilitarComponente("txtSueldo");
+    habilitarComponente("btnGuardar");
+}
 
 mostrarEmpleados=()=>{
     let contenidoTabla="<table>"+
@@ -29,6 +41,12 @@ mostrarOpcionEmpleado=()=>{
     ocultarComponente("divRol");
     ocultarComponente("divResumen");
     mostrarEmpleados();
+
+    deshabilitarComponente("txtCedula");
+    deshabilitarComponente("txtNombre");
+    deshabilitarComponente("txtApellido");
+    deshabilitarComponente("txtSueldo");
+    deshabilitarComponente("btnGuardar");
 }
 
 mostrarOpcionRol=()=>{

@@ -1,11 +1,12 @@
 mostarNumeros=()=>{
     console.log("antes del for");
-    for (let i = 0; i <4; i++) {
+    for (let i = 0; i<=0; i++) {
         console.log(i);
         
     }
 
     console.log("despues del for");
+   
 }
 mostarNumeros2=()=>{
     console.log("antes del for");
@@ -53,3 +54,8 @@ mostarImpares=()=>{
 
     console.log("despues del for");
 }
+
+
+
+
+

@@ -6,7 +6,45 @@ let empleados = [
 
 let esNuevo=false;
 
+calcularRol=()=>{
+    let aporte;
+    let valorPagar;
+    let sueldo= recuperarFloatDiv("infoSueldo");
+    let descuento= recuperarFloat("txtDescuentos");
 
+if (descuento>=0 && descuento<=sueldo) {
+    aporte=calcularAporteEmpleado(sueldo);
+
+    mostrarTexto("infoIESS",aporte);
+    valorPagar=calcularValorApagar(sueldo,aporte,descuento);
+    mostrarTexto("infoPago", valorPagar);
+}
+}
+
+calcularValorApagar=(sueldo,aporte,descuento)=>{
+    let valorPagar;
+valorPagar=sueldo-(aporte+descuento);
+    return valorPagar;
+}
+
+calcularAporteEmpleado=(sueldo)=>{
+let aporte;
+aporte=sueldo *(9.45/100);
+return aporte;
+}
+
+buscarPorRol=()=>{
+    let encontrado;
+    let cedula=recuperarTexto("txtBusquedaCedulaRol");
+    encontrado=buscarEmpleado(cedula);
+    if (encontrado) {
+        mostrarTexto("infoCedula",encontrado.cedula);
+        mostrarTexto("infoNombre",encontrado.nombre+" "+encontrado.apellido);
+        mostrarTexto("infoSueldo",encontrado.sueldo);
+    }else{
+        alert("NO EXISTE EMPELEADO");
+    }
+}
 
 ejecutarBusqueda=()=>{
     let encontrado;

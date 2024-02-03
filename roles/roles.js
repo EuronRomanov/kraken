@@ -33,6 +33,8 @@ guardar=()=>{
             if (esAgregado) {
                 alert("EMPLEADO GUARDADO CORRECTAMENTE");
                 mostrarEmpleados();
+               bloquearCamposFormulario();
+               
             } else {
                 alert("YA EXISTE UN EMPLEADO CON LA CEDULA "+empleadoNuevo.cedula);
             }
@@ -109,6 +111,12 @@ mostrarOpcionEmpleado=()=>{
     ocultarComponente("divResumen");
     mostrarEmpleados();
 
+    bloquearCamposFormulario();
+}
+
+
+bloquearCamposFormulario=()=>{
+    esNuevo=false;
     deshabilitarComponente("txtCedula");
     deshabilitarComponente("txtNombre");
     deshabilitarComponente("txtApellido");

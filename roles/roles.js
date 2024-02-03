@@ -8,9 +8,30 @@ let esNuevo=false;
 
 
 
+ejecutarBusqueda=()=>{
+    let encontrado;
+    let cedula=recuperarTexto("txtBusquedaCedula");
+    encontrado=buscarEmpleado(cedula);
+    if (encontrado) {
+        mostrarTextoEnCaja("txtCedula",encontrado.cedula);
+        mostrarTextoEnCaja("txtNombre",encontrado.nombre);
+        mostrarTextoEnCaja("txtApellido",encontrado.apellido);
+        mostrarTextoEnCaja("txtSueldo",encontrado.sueldo);
+
+        deshabilitarComponente("txtCedula");
+    habilitarComponente("txtNombre");
+    habilitarComponente("txtApellido");
+    habilitarComponente("txtSueldo");
+    habilitarComponente("btnGuardar");
+    } else {
+        alert("EMPLEADO NO EXISTE");
+    }
+}
+
+
 
 guardar=()=>{
-
+    let encontrado;
     let esAgregado;
     let cedula=recuperarTexto("txtCedula");
     let nombre=recuperarTexto("txtNombre");
@@ -33,14 +54,32 @@ guardar=()=>{
             if (esAgregado) {
                 alert("EMPLEADO GUARDADO CORRECTAMENTE");
                 mostrarEmpleados();
-               bloquearCamposFormulario();
+                limpiar();
                
             } else {
                 alert("YA EXISTE UN EMPLEADO CON LA CEDULA "+empleadoNuevo.cedula);
             }
+        }else{
+            encontrado=buscarEmpleado(cedula);
+            encontrado.cedula=cedula;
+            encontrado.nombre=nombre;
+            encontrado.apellido=apellido;
+            encontrado.sueldo=sueldo;
+            alert("EMPLEADO MODIFICADO EXITOSAMENTE");
+            mostrarEmpleados();
+            limpiar();
         }
 
    }
+}
+
+
+limpiar=()=>{
+    mostrarTextoEnCaja("txtCedula","");
+    mostrarTextoEnCaja("txtNombre","");
+    mostrarTextoEnCaja("txtApellido","");
+    mostrarTextoEnCaja("txtSueldo","");
+    bloquearCamposFormulario();
 }
 
 agregarEmpleado=(empleado)=>{

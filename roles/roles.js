@@ -70,7 +70,7 @@ guardarRol=()=>{
     nuevoRol.nombre=nombre;
     nuevoRol.sueldo=sueldo; 
      nuevoRol.valorPagar=Math.round(valorPagar*100)/100  ; 
-     nuevoRol.aporteEmpleado=Math.round(aporteEmpleado*100)/100;  
+     nuevoRol.aporteEmpleado=Math.round(aporte*100)/100;  
      nuevoRol.aporteEmpleador=Math.round(aporteEmpleador*100)/100;
      agregarRol(nuevoRol);
    
@@ -119,7 +119,7 @@ calcularRol=()=>{
     let descuento= recuperarFloat("txtDescuentos");
 
 if (descuento>=0 && descuento<=sueldo) {
-    aporte=calcularAporteEmpleado(sueldo);
+    aporte=Math.round(calcularAporteEmpleado(sueldo)*100)/100;
 
     mostrarTexto("infoIESS",aporte);
     valorPagar=calcularValorApagar(sueldo,aporte,descuento);
@@ -320,6 +320,7 @@ mostrarOpcionResumen=()=>{
     mostrarComponente("divResumen");
     ocultarComponente("divEmpleado");
     ocultarComponente("divRol");
+    mostrarRoles();
     mostrarTotales();
 }
 

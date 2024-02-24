@@ -122,7 +122,7 @@ if (descuento>=0 && descuento<=sueldo) {
     aporte=Math.round(calcularAporteEmpleado(sueldo)*100)/100;
 
     mostrarTexto("infoIESS",aporte);
-    valorPagar=calcularValorApagar(sueldo,aporte,descuento);
+    valorPagar= Math.round(calcularValorApagar(sueldo,aporte,descuento)*100)/100;
     mostrarTexto("infoPago", valorPagar);
     habilitarComponente("btnGuardarRol");
 }
